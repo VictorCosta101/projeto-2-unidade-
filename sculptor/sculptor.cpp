@@ -114,7 +114,7 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
             {
              if(distancia(xcenter,i,ycenter,j,zcenter,k,radius))
              {
-                 putVoxel(i,j,k);
+                 cutVoxel(i,j,k);
              }
             }
         }
