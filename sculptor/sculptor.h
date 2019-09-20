@@ -27,6 +27,7 @@ public:
   void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   void writeOFF(char* filename);
   bool distancia(int x0, int x1, int y0, int y1, int z0, int z1, int radius);
+  bool distanciaElipse(int x0, int y0, int z0, int rx, int ry, int rz,int x, int y, int z);
 };
 
 #endif // SCULPTOR_H

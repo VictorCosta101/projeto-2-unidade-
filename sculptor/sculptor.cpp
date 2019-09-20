@@ -122,12 +122,41 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
 {
-
+    if(xcenter<=nx&&ycenter<=ny&&zcenter<=nz)
+    {
+        for(int i =0 ; i < nx; i++)
+        {
+            for(int j = 0; j < ny; j++)
+            {
+                for(int k = 0; k < nz; k++)
+                {
+                 if(distanciaElipse(xcenter, ycenter, zcenter, rx, ry, rz, i, j,k))
+                 {
+                     putVoxel(i,j,k);
+                 }
+                }
+            }
+        }
+    }
 }
 
-void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-{
-
+void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx , int ry, int rz)
+{if(xcenter<=nx&&ycenter<=ny&&zcenter<=nz)
+    {
+        for(int i =0 ; i < nx; i++)
+        {
+            for(int j = 0; j < ny; j++)
+            {
+                for(int k = 0; k < nz; k++)
+                {
+                 if(distanciaElipse(xcenter, ycenter, zcenter, rx, ry, rz, i, j,k))
+                 {
+                     cutVoxel(i,j,k);
+                 }
+                }
+            }
+        }
+    }
 }
 
 void Sculptor::writeOFF(char *filename)
@@ -144,5 +173,22 @@ bool Sculptor::distancia(int x0, int x1, int y0, int y1, int z0, int z1, int rad
         return true;
     }
     else return false;
+}
+
+bool Sculptor::distanciaElipse(int x0, int y0, int z0, int rx, int ry, int rz,int x, int y, int z)
+{
+    float dist1, dist2, dist3, total;
+    dist1= (pow(x-x0,2)/pow(rx,2));
+    dist2=(pow(y-y0,2)/pow(ry,2));
+    dist3=(pow(z-z0,2)/pow(rz,2));
+
+    total = dist1+dist2+dist3;
+
+    if( total <= 1)
+    {
+        return true;
+    }
+    else return false;
+
 }
 
