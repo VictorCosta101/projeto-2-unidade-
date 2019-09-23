@@ -1,14 +1,17 @@
 #ifndef SCULPTOR_H
 #define SCULPTOR_H
+#include <fstream>
 
+using namespace std;
+struct Voxel {
+  float r,g,b; // Colors
+  float a;
+// Transparency
+  bool isOn; // Included or not
+};
 class Sculptor {
 protected:
-    struct Voxel {
-      float r,g,b; // Colors
-      float a;
-    // Transparency
-      bool isOn; // Included or not
-    };
+
   Voxel ***v;
   // 3D matrix
   int nx,ny,nz; // Dimensions
@@ -25,9 +28,9 @@ public:
   void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
   void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-  void writeOFF(char* filename);
-  bool distancia(int x0, int x1, int y0, int y1, int z0, int z1, int radius);
-  bool distanciaElipse(int x0, int y0, int z0, int rx, int ry, int rz,int x, int y, int z);
+  void writeOFF(string filename);
+
+
 };
 
 #endif // SCULPTOR_H
