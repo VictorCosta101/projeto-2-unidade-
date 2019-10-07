@@ -13,8 +13,7 @@ PutVoxel::~PutVoxel()
 
 }
 
-void PutVoxel::draw(Sculptor &t)
-{
+void PutVoxel:: draw(Sculptor &t){
     t.setColor(_r,_g,_b,a);
     t.putVoxel(_x,_y,_z);
 }
