@@ -1,12 +1,44 @@
 #include <iostream>
 #include <sculptor.h>
-
+#include <fstream>
+#include <cstring>
 
 using namespace std;
 
 int main()
 {
-    int acao=0;
+
+    char  a[30], b[12];
+
+
+
+
+    ifstream arq;
+
+    arq.open("C:/Users/UFRNLAB/Desktop/projeto 2/projeto-2-unidade-/Sculptor/objeto.txt",ios::in);
+
+if(arq.is_open()){
+
+    cout<<"ok"<<endl;
+    arq.getline(a,sizeof(a));
+}
+
+for(int i = 0 ; i < sizeof(a) ; i++)
+{   if(a[i] != ' '){
+         b[i]=a[i];
+    }
+    else
+    {
+        break;
+    }
+}
+
+arq >> a;
+cout << a << endl;
+cout << " b :" <<endl;
+cout << b <<endl;
+
+    /* int acao=0;
     string arquivo = "objeto1";
 
     Sculptor v(20,20,20);
@@ -53,7 +85,7 @@ int main()
     }
 
 
-    v.writeOFF(arquivo);
+    v.writeOFF(arquivo);*/
 
     return 0;
 }
