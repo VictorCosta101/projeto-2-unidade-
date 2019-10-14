@@ -1,42 +1,66 @@
 #include <iostream>
 #include <sculptor.h>
 #include <fstream>
-#include <cstring>
+#include <sstream>
+#include <string>
 
+#include "cutbox.h"
 using namespace std;
 
 int main()
 {
+    Sculptor *s;
 
-    char  a[30], b[12];
+    vector<FiguraGeometrica*> v;
 
-
-
-
+    string texto, comando;
     ifstream arq;
 
     arq.open("C:/Users/UFRNLAB/Desktop/projeto 2/projeto-2-unidade-/Sculptor/objeto.txt",ios::in);
 
-if(arq.is_open()){
+    stringstream ss;
 
-    cout<<"ok"<<endl;
-    arq.getline(a,sizeof(a));
-}
 
-for(int i = 0 ; i < sizeof(a) ; i++)
-{   if(a[i] != ' '){
-         b[i]=a[i];
-    }
-    else
+    while(1)
     {
-        break;
-    }
-}
+        getline(arq, texto);
 
-arq >> a;
-cout << a << endl;
-cout << " b :" <<endl;
-cout << b <<endl;
+        if(arq.good())
+        {
+            stringstream ss(texto);
+            ss >> comando;
+            cout << comando << endl;
+            if(comando.compare("cutbox")==0)
+            {
+                int pos[3];
+                float color[4];
+
+                ss >> pos[0]>>pos[1]>>pos[2];
+                ss>>color[0]>>color[1]>>color[3]>>color[4];
+
+                for(int i = 0; i < 3; i ++)
+                {
+                    cout << pos[i]<<endl;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* int acao=0;
     string arquivo = "objeto1";

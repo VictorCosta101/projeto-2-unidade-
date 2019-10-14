@@ -1,1 +1,2 @@
-cutbox x0 x1 y0 y1 z0 z1
+cutbox 1 4 5 y1 z0 z1
+putsphere x0 y0 z0 raio r g b a
