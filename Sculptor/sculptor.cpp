@@ -16,6 +16,7 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
 {
     /* * /metodo Sculptor faz a alocacao dinamica da matriz que recebera os Voxels*/
         nx = _nx; ny= _ny; nz= _nz;
+
    v = new Voxel**[_nx]();
     for(int i = 0; i < _nx;i++)
     {
@@ -110,11 +111,11 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
 */
     if(x0 < nx && y0 < ny && z0 < nz)
     {
-        for(int k = 0; k < nz; k++)
+        for(int k = z0; k < z1; k++)
         {
-            for(int j = 0 ; j < ny; j++)
+            for(int j = y0 ; j < y1; j++)
             {
-                for(int i = 0; i < nx; i++)
+                for(int i = x0; i < x1; i++)
                     cutVoxel(i,j,k);
             }
         }
@@ -157,11 +158,11 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
     /* Remove a espera */
     if(xcenter < nx && ycenter < ny && zcenter < nz)
     {
-        for(int k = 0; k < nz; k++)
+        for(int k = zcenter; k < radius; k++)
         {
-            for(int j = 0 ; j < ny; j++)
+            for(int j = ycenter ; j < radius; j++)
             {
-                for(int i = 0; i < nx; i++)
+                for(int i = xcenter; i < radius; i++)
                     cutVoxel(i,j,k);
             }
         }
@@ -201,11 +202,11 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 {
     if(xcenter < nx && ycenter < ny && zcenter < nz)
     {
-        for(int k = 0; k < nz; k++)
+        for(int k = zcenter; k < rz; k++)
         {
-            for(int j = 0 ; j < ny; j++)
+            for(int j = ycenter ; j < ry; j++)
             {
-                for(int i = 0; i < nx; i++)
+                for(int i = xcenter; i < rx; i++)
                     cutVoxel(i,j,k);
             }
         }
@@ -222,7 +223,7 @@ void Sculptor::writeOFF(string filename)
     int aux = 0; // variavel auxiliar
 
     // objeto.open("C:/Desktop"+filename+".off"); // local onde o arquivo OFF fica armazenado
-    objeto.open("objeto1.off");
+    objeto.open("C:/Users/UFRNLAB/Desktop/"+filename+".off");
     if(objeto.is_open())// teste se o arquivo foi criado e está aberto
     {
         cout<<"O arquivo foi aberto \n";
@@ -238,6 +239,7 @@ void Sculptor::writeOFF(string filename)
 
     for(int i = 0 ; i < nx; i++)
     {
+
         for(int j = 0; j < ny ; j++)
         {
             for(int k = 0; k < nz; k++)
@@ -271,6 +273,7 @@ void Sculptor::writeOFF(string filename)
             }
         }
     }
+
     //Dimensionar cada face de cada Voxel e atribuindo as cores correspondente.
     for(int i=0 ; i < nx ; i++){
         for(int j = 0 ; j < ny ; j++){

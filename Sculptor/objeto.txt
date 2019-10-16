@@ -1,2 +1,3 @@
-cutbox 1 4 5 y1 z0 z1
-putsphere x0 y0 z0 raio r g b a
+dim 60 40 55
+putsphere 10 10 5 3 1.0 1.0 0.5 0.3
+cutsphere 10 10 5 4
