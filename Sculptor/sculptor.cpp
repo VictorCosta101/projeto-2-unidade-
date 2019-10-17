@@ -158,11 +158,11 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
     /* Remove a espera */
     if(xcenter < nx && ycenter < ny && zcenter < nz)
     {
-        for(int k = zcenter; k < radius; k++)
+        for(int k = zcenter; k < zcenter+ radius; k++)
         {
-            for(int j = ycenter ; j < radius; j++)
+            for(int j = ycenter ; j < ycenter+ radius; j++)
             {
-                for(int i = xcenter; i < radius; i++)
+                for(int i = xcenter; i < xcenter+ radius; i++)
                     cutVoxel(i,j,k);
             }
         }
@@ -202,11 +202,11 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 {
     if(xcenter < nx && ycenter < ny && zcenter < nz)
     {
-        for(int k = zcenter; k < rz; k++)
+        for(int k = zcenter; k < zcenter+rz; k++)
         {
-            for(int j = ycenter ; j < ry; j++)
+            for(int j = ycenter ; j < ycenter+ry; j++)
             {
-                for(int i = xcenter; i < rx; i++)
+                for(int i = xcenter; i < xcenter+rx; i++)
                     cutVoxel(i,j,k);
             }
         }
