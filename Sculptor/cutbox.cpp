@@ -1,9 +1,10 @@
 #include "cutbox.h"
 
+//Classe para apagar/cortar uma objetos etangulares
 
 CutBox::CutBox(int x0,int x1, int y0, int y1, int z0, int z1)
 {
-    x0_ = x0; x1_ = x1; y0_ = y0; y1_ = y1; z1_ = z1;
+    x0_ = x0; x1_ = x1; y0_ = y0; y1_ = y1; z0_=z0; z1_ = z1;
 }
 CutBox::~CutBox()
 {}

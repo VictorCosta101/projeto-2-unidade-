@@ -91,12 +91,11 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 */
     if(x0 < nx && y0 < ny && z0 < nz)
     {
-        cout <<"ok 1"<<endl;
-        for(int k = 0; k < z1; k++)
+        for(int k = z0; k < z1; k++)
         {
-            for(int j = 0 ; j < y1; j++)
+            for(int j = y0 ; j < y1; j++)
             {
-                for(int i = 0; i < x1; i++)
+                for(int i = x0; i < x1; i++)
                     putVoxel(i,j,k);
             }
         }
@@ -113,6 +112,7 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
     {
         for(int k = z0; k < z1; k++)
         {
+
             for(int j = y0 ; j < y1; j++)
             {
                 for(int i = x0; i < x1; i++)
@@ -120,6 +120,7 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
             }
         }
     }
+
 }
 //cria uma esfera
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
@@ -223,7 +224,7 @@ void Sculptor::writeOFF(string filename)
     int aux = 0; // variavel auxiliar
 
     // objeto.open("C:/Desktop"+filename+".off"); // local onde o arquivo OFF fica armazenado
-    objeto.open("C:/Users/UFRNLAB/Desktop/"+filename+".off");
+    objeto.open("C:/Users/Victor/Desktop/"+filename+".off");
     if(objeto.is_open())// teste se o arquivo foi criado e está aberto
     {
         cout<<"O arquivo foi aberto \n";

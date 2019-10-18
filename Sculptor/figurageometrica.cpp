@@ -1,11 +1,11 @@
 #include "figurageometrica.h"
-
-FiguraGeometrica::FiguraGeometrica()
+//classe abstrata
+FiguraGeometrica::FiguraGeometrica() //construtor da classe abstrata
 {
 
 }
 
-FiguraGeometrica::~FiguraGeometrica()
+FiguraGeometrica::~FiguraGeometrica()//destrutor da classe abstrata
 {
 
 }
