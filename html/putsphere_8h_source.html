@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>sculptor documentação: Código-Fonte de Projeto2/projeto-2-unidade-/Sculptor/putsphere.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">sculptor documentação
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_733caf70f09f4ddaa3acc7931a0f4712.html">Projeto2</a></li><li class="navelem"><a class="el" href="dir_361749c616aff4f4af196cbf7d3844d8.html">projeto-2-unidade-</a></li><li class="navelem"><a class="el" href="dir_6557dba122cd08fd502d9da20d8e7962.html">Sculptor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">putsphere.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="putsphere_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PUTSPHERE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PUTSPHERE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="figurageometrica_8h.html">figurageometrica.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_put_sphere.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_put_sphere.html">PutSphere</a>: <span class="keyword">public</span> <a class="code" href="class_figura_geometrica.html">FiguraGeometrica</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_put_sphere.html#a03528dea1bf59816535ca6ec2cc697d6">    9</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_put_sphere.html#abaa8e35bf6978348a21dc27c084539b9">_x0</a>,<a class="code" href="class_put_sphere.html#ad557ed4a1dad01604db2de1627a58fde">_y0</a>,<a class="code" href="class_put_sphere.html#a03528dea1bf59816535ca6ec2cc697d6">_z0</a>,<a class="code" href="class_put_sphere.html#a92b85d089cecedd2d8870e5e67464a45">_raio</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_put_sphere.html#a48f5641a28d333bd823a590af849d129">   10</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_put_sphere.html#a57d65b0e05ab59fb1cee917ce8066570">_r</a>, <a class="code" href="class_put_sphere.html#aa86a645add14a1d63a71b5e75909448d">_g</a>, <a class="code" href="class_put_sphere.html#a70d0fac4bbeed3336d2dda943cb6b982">_b</a>, <a class="code" href="class_put_sphere.html#a48f5641a28d333bd823a590af849d129">a</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_put_sphere.html#a0f4955f462f56db307e916bea53293e5">PutSphere</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> radius</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;              ,<span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g,<span class="keywordtype">float</span> b,<span class="keywordtype">float</span> alpha);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_put_sphere.html#ab1c65114a718e71349497588ccb3e04b">~PutSphere</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="class_put_sphere.html#a5105d1e171563e16c148d8f715321b24">draw</a>(<a class="code" href="class_sculptor.html">Sculptor</a> &amp;t);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // PUTSPHERE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_figura_geometrica_html"><div class="ttname"><a href="class_figura_geometrica.html">FiguraGeometrica</a></div><div class="ttdef"><b>Definition:</b> figurageometrica.h:5</div></div>
+<div class="ttc" id="afigurageometrica_8h_html"><div class="ttname"><a href="figurageometrica_8h.html">figurageometrica.h</a></div></div>
+<div class="ttc" id="aclass_put_sphere_html_ad557ed4a1dad01604db2de1627a58fde"><div class="ttname"><a href="class_put_sphere.html#ad557ed4a1dad01604db2de1627a58fde">PutSphere::_y0</a></div><div class="ttdeci">int _y0</div><div class="ttdef"><b>Definition:</b> putsphere.h:9</div></div>
+<div class="ttc" id="aclass_sculptor_html"><div class="ttname"><a href="class_sculptor.html">Sculptor</a></div><div class="ttdef"><b>Definition:</b> sculptor.h:14</div></div>
+<div class="ttc" id="aclass_put_sphere_html_abaa8e35bf6978348a21dc27c084539b9"><div class="ttname"><a href="class_put_sphere.html#abaa8e35bf6978348a21dc27c084539b9">PutSphere::_x0</a></div><div class="ttdeci">int _x0</div><div class="ttdef"><b>Definition:</b> putsphere.h:9</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a5105d1e171563e16c148d8f715321b24"><div class="ttname"><a href="class_put_sphere.html#a5105d1e171563e16c148d8f715321b24">PutSphere::draw</a></div><div class="ttdeci">void draw(Sculptor &amp;t)</div><div class="ttdef"><b>Definition:</b> putsphere.cpp:18</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a92b85d089cecedd2d8870e5e67464a45"><div class="ttname"><a href="class_put_sphere.html#a92b85d089cecedd2d8870e5e67464a45">PutSphere::_raio</a></div><div class="ttdeci">int _raio</div><div class="ttdef"><b>Definition:</b> putsphere.h:9</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a70d0fac4bbeed3336d2dda943cb6b982"><div class="ttname"><a href="class_put_sphere.html#a70d0fac4bbeed3336d2dda943cb6b982">PutSphere::_b</a></div><div class="ttdeci">float _b</div><div class="ttdef"><b>Definition:</b> putsphere.h:10</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a57d65b0e05ab59fb1cee917ce8066570"><div class="ttname"><a href="class_put_sphere.html#a57d65b0e05ab59fb1cee917ce8066570">PutSphere::_r</a></div><div class="ttdeci">float _r</div><div class="ttdef"><b>Definition:</b> putsphere.h:10</div></div>
+<div class="ttc" id="aclass_put_sphere_html"><div class="ttname"><a href="class_put_sphere.html">PutSphere</a></div><div class="ttdef"><b>Definition:</b> putsphere.h:6</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a48f5641a28d333bd823a590af849d129"><div class="ttname"><a href="class_put_sphere.html#a48f5641a28d333bd823a590af849d129">PutSphere::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> putsphere.h:10</div></div>
+<div class="ttc" id="aclass_put_sphere_html_aa86a645add14a1d63a71b5e75909448d"><div class="ttname"><a href="class_put_sphere.html#aa86a645add14a1d63a71b5e75909448d">PutSphere::_g</a></div><div class="ttdeci">float _g</div><div class="ttdef"><b>Definition:</b> putsphere.h:10</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a03528dea1bf59816535ca6ec2cc697d6"><div class="ttname"><a href="class_put_sphere.html#a03528dea1bf59816535ca6ec2cc697d6">PutSphere::_z0</a></div><div class="ttdeci">int _z0</div><div class="ttdef"><b>Definition:</b> putsphere.h:9</div></div>
+<div class="ttc" id="aclass_put_sphere_html_ab1c65114a718e71349497588ccb3e04b"><div class="ttname"><a href="class_put_sphere.html#ab1c65114a718e71349497588ccb3e04b">PutSphere::~PutSphere</a></div><div class="ttdeci">~PutSphere()</div><div class="ttdef"><b>Definition:</b> putsphere.cpp:13</div></div>
+<div class="ttc" id="aclass_put_sphere_html_a0f4955f462f56db307e916bea53293e5"><div class="ttname"><a href="class_put_sphere.html#a0f4955f462f56db307e916bea53293e5">PutSphere::PutSphere</a></div><div class="ttdeci">PutSphere(int xcenter, int ycenter, int zcenter, int radius, float r, float g, float b, float alpha)</div><div class="ttdef"><b>Definition:</b> putsphere.cpp:5</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.16
+</small></address>
+</body>
+</html>

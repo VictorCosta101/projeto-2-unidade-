@@ -224,7 +224,7 @@ void Sculptor::writeOFF(string filename)
     int aux = 0; // variavel auxiliar
 
     // objeto.open("C:/Desktop"+filename+".off"); // local onde o arquivo OFF fica armazenado
-    objeto.open("C:/Users/Victor/Desktop/"+filename+".off");
+    objeto.open("C:/Users/UFRNLAB/Desktop/"+filename+".off");
     if(objeto.is_open())// teste se o arquivo foi criado e está aberto
     {
         cout<<"O arquivo foi aberto \n";

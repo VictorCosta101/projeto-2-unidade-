@@ -27,7 +27,7 @@ int main()
     string texto, comando;
     ifstream arq;
     // Abrir o aqruivo com as infomações dos objetos
-    arq.open("C:/Users/Victor/Desktop/Projeto2/projeto-2-unidade-/Sculptor/objeto.txt",ios::in);
+    arq.open("C:/Users/UFRNLAB/Desktop/projeto-2-unidade-/Sculptor/objeto.txt",ios::in);
 
     if(!arq.is_open()) //Verificação se o arquivo arq está aberto
 
